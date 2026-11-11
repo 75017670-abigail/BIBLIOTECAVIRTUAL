@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #263238;
+}
+
+header {
+    background: #183b56;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #f2c14e;
+}
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background:
+        linear-gradient(rgba(24, 59, 86, 0.72), rgba(24, 59, 86, 0.72)),
+        url("https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+}
+
+.hero-text {
+    max-width: 600px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.boton {
+    display: inline-block;
+    background: #f2c14e;
+    color: #183b56;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenido,
+.categorias,
+.nosotros {
+    padding: 55px 8%;
+}
+
+h2 {
+    text-align: center;
+    color: #183b56;
+    margin-bottom: 35px;
+    font-size: 30px;
+}
+
+.libros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+.card h3 {
+    color: #183b56;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #5f6b73;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.card button {
+    border: none;
+    background: #183b56;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #24597d;
+}
+
+.categorias {
+    background: #eaf0f4;
+}
+
+.categoria-lista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.categoria-lista div {
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #183b56;
+}
+
+.nosotros {
+    text-align: center;
+}
+
+.nosotros p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.7;
+    color: #5f6b73;
+}
+
+footer {
+    background: #183b56;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .libros {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
